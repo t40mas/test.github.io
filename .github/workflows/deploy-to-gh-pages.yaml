@@ -14,6 +14,7 @@ jobs:
       - name: Remove Git LFS
         run: |
           rm .gitattributes
+          git lfs uninstall
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.3.3
