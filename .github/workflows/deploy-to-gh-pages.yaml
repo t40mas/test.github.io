@@ -18,3 +18,4 @@ jobs:
         with:
           branch: gh-pages
           folder: .
+          BUILD_SCRIPT: git lfs pull
