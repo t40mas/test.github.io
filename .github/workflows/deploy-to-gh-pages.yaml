@@ -13,7 +13,6 @@ jobs:
 
       - name: Remove Git LFS
         run: |
-          rm .gitattributes
           git lfs uninstall
 
       - name: Deploy 🚀
