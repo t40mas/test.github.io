@@ -7,14 +7,8 @@ jobs:
     concurrency: ci-${{ github.ref }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-        with:
-          lfs: true
-      - name: Git LFS fetch
-        run: |
-          git pull
-          git lfs fetch
-          git lfs uninstall
+      - name: Checkout code
+        uses: nschloe/action-cached-lfs-checkout@v1
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
