@@ -14,8 +14,7 @@ jobs:
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.3.3
-        run: git lfs pull
         with:
           branch: gh-pages
           folder: .
-          BUILD_SCRIPT: git lfs pull
+          build_script: git lfs pull
