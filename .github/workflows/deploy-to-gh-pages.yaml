@@ -9,9 +9,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: |
-          git checkout main
           git pull
-          git lfs fetch
+          git lfs checkout
+          git lfs uninstall
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
