@@ -9,8 +9,7 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
-        with:
-          lfs: true
+        run: git lfs pull
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.3.3
