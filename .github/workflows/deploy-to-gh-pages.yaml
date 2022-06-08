@@ -11,7 +11,7 @@ jobs:
       - run: |
           git checkout main
           git pull
-          git lfs checkout
+          git lfs fetch
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
