@@ -12,7 +12,10 @@ jobs:
           lfs: true
 
       - name: Remove Git LFS
-        run: rm .gitattributes
+        run: |
+          rm .gitattributes
+          git lfs fetch
+          git lfs uninstall
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.3.3
