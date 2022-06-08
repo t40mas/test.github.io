@@ -13,6 +13,5 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
-          lfs: true
           branch: gh-pages
           folder: .
