@@ -12,12 +12,9 @@ jobs:
         with:
           lfs: true
 
-      - name: Install and Build 🔧
-        run: |
-          git lfs checkout
-
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4.3.3
+        uses: JamesIves/github-pages-deploy-action@v3.6.0
         with:
+          lfs: true
           branch: gh-pages
           folder: .
