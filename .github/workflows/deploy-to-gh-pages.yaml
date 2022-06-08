@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Git LFS fetch
       - run: |
           git pull
           git lfs fetch
@@ -16,3 +17,4 @@ jobs:
         with:
           branch: gh-pages
           folder: .
+          lfs: true
