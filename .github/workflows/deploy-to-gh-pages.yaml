@@ -4,11 +4,12 @@ permissions:
   contents: write
 jobs:
   build-and-deploy:
-    concurrency: ci-${{ github.ref }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: nschloe/action-cached-lfs-checkout@v1
+        with:
+          exclude: .gitattributes
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
