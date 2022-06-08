@@ -9,7 +9,8 @@ jobs:
       - name: Checkout code
         uses: nschloe/action-cached-lfs-checkout@v1
         with:
-          exclude: ".gitattributes"
+          exclude:
+            ".gitattributes"
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
