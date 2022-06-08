@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Git LFS fetch
-      - run: |
+        run: |
           git pull
           git lfs fetch
       - name: Deploy 🚀
